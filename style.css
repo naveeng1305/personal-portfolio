@@ -16,10 +16,9 @@ linear-gradient(
 #000000 100%
 );
 
-```
+
 color:white;
 overflow-x:hidden;
-```
 
 }
 
@@ -72,11 +71,19 @@ padding:20px 8%;
 }
 
 .logo{
-color:#ef4444;
 font-size:1.6rem;
 font-weight:bold;
-}
 
+background:linear-gradient(
+90deg,
+#ffffff,
+#ef4444
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+}
 .nav-links{
 display:flex;
 gap:25px;
@@ -112,14 +119,39 @@ margin-bottom:10px;
 }
 
 .hero-content h1{
-font-size:4rem;
+font-size:4.5rem;
+font-weight:800;
+
+background:linear-gradient(
+90deg,
+#ffffff,
+#ef4444
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+
 margin-bottom:10px;
+text-shadow:
+0 0 10px rgba(239,68,68,.4),
+0 0 30px rgba(239,68,68,.2);
 }
 
 .hero-content h2{
-color:#ef4444;
-margin-bottom:20px;
+
+background:linear-gradient(
+90deg,
+#ffffff,
+#dc2626
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+
 font-size:2rem;
+margin-bottom:20px;
 }
 
 .hero-content p{
@@ -164,12 +196,18 @@ transform:scale(1.03);
 display:inline-block;
 margin-top:25px;
 padding:12px 28px;
-background:#ef4444;
+background:
+linear-gradient(
+135deg,
+#dc2626,
+#7f1d1d
+);
 color:white;
 text-decoration:none;
 border-radius:30px;
 font-weight:600;
 transition:.3s;
+    
 }
 
 .btn:hover
@@ -198,10 +236,18 @@ padding:100px 10%;
 .section h2{
 text-align:center;
 font-size:2.5rem;
-color:#ef4444;
 margin-bottom:40px;
-}
 
+background:linear-gradient(
+90deg,
+#ffffff,
+#ef4444
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+}
 /* GLASS CARDS */
 
 .card{
@@ -231,17 +277,12 @@ transform:translateY(-10px);
 display:grid;
 grid-template-columns:
 repeat(auto-fit,minmax(180px,1fr));
-
-```
 gap:25px;
-```
 
 }
 
 .skill-card{
 background:rgba(255,255,255,.05);
-
-```
 backdrop-filter:blur(12px);
 
 border:1px solid rgba(239,68,68,.2);
@@ -317,10 +358,19 @@ transition:.4s;
 }
 
 .publication-card h3{
-color:#ef4444;
+
+background:linear-gradient(
+90deg,
+#ffffff,
+#ef4444
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+
 margin-bottom:15px;
 }
-
 .publication-card:hover{
 transform:translateY(-10px);
 }
