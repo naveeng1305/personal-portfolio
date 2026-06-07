@@ -1,7 +1,5 @@
 /* ===== GOOGLE FONT ===== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -412,4 +410,101 @@ footer {
   section {
     padding: 40px 20px;
   }
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+
+/* Base state - hidden before scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible state - triggered by JS */
+.fade-up.visible,
+.fade-left.visible,
+.fade-right.visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Stagger delay for grid items */
+.fade-up:nth-child(1) { transition-delay: 0s; }
+.fade-up:nth-child(2) { transition-delay: 0.1s; }
+.fade-up:nth-child(3) { transition-delay: 0.2s; }
+.fade-up:nth-child(4) { transition-delay: 0.3s; }
+.fade-up:nth-child(5) { transition-delay: 0.4s; }
+.fade-up:nth-child(6) { transition-delay: 0.5s; }
+
+/* Card hover lift */
+.card, .edu-card, .skill-card, .project-card, .pub-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover, .edu-card:hover, .pub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(108, 99, 255, 0.12);
+}
+
+.skill-card:hover, .project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(108, 99, 255, 0.12);
+}
+
+/* Navbar link underline animation */
+nav .nav-links a {
+  position: relative;
+}
+
+nav .nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6c63ff;
+  transition: width 0.3s ease;
+}
+
+nav .nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Button hover animation */
+.btn-primary, .btn-outline {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover, .btn-outline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(108, 99, 255, 0.3);
+}
+
+/* Hero image pulse ring */
+.hero-image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 0 8px rgba(108, 99, 255, 0.15);
+}
+
+/* Section heading slide-in */
+h2 {
+  transition: color 0.3s ease;
 }
