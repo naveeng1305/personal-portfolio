@@ -1,5 +1,5 @@
 // Typing Animation
-const text = "Java Full Stack Developer";
+const text = "Open To Work";
 let index = 0;
 
 function typeEffect() {
