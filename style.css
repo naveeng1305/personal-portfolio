@@ -505,3 +505,22 @@ nav .nav-links a:hover::after {
 h2 {
   transition: color 0.3s ease;
 }
+/* ===== BOUNCE ON SCROLL ===== */
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: translateY(60px); }
+  60%  { opacity: 1; transform: translateY(-12px); }
+  80%  { transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.bounce {
+  opacity: 0;
+}
+
+.bounce.visible {
+  animation: bounceIn 0.7s ease forwards;
+}
+
+.bounce:nth-child(1) { animation-delay: 0s; }
+.bounce:nth-child(2) { animation-delay: 0.15s; }
+.bounce:nth-child(3) { animation-delay: 0.3s; }
