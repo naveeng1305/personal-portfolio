@@ -359,4 +359,27 @@ display:none;
 padding:80px 8%;
 }
 
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    gap:100px;
+}
+
+.hero-content{
+    width:50%;
+}
+
+.hero-image{
+    width:50%;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:350px;
+    height:430px;
+    object-fit:cover;
 }
