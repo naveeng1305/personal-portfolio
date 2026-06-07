@@ -8,3 +8,25 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
   });
 });
+
+document.querySelectorAll('.horizontal-section').forEach(section => {
+  const track = section.querySelector('.horizontal-track');
+
+  window.addEventListener('scroll', () => {
+    const rect = section.getBoundingClientRect();
+
+    const progress = Math.max(
+      0,
+      Math.min(
+        1,
+        -rect.top / (section.offsetHeight - window.innerHeight)
+      )
+    );
+
+    const maxMove =
+      track.scrollWidth - window.innerWidth + 100;
+
+    track.style.transform =
+      `translateX(-${progress * maxMove}px)`;
+  });
+});
